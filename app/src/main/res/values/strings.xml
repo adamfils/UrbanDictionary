@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Urban Dictionary</string>
+    <string name="search">Search</string>
+    <string name="invalid">Invalid Query</string>
+    <string name="query_failed">Query Failed</string>
+    <string name="app_logo">App Logo</string>
+</resources>
