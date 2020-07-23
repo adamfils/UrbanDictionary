@@ -1,13 +1,11 @@
 package com.techguy.urbandictionary.utils
 
-import android.util.Log
 import com.orm.SugarRecord
 import com.techguy.urbandictionary.model.SearchModel
-import java.util.regex.Pattern
 
-class DBUtils {
+open class DBUtils {
 
-    fun searchDB(query: String): List<SearchModel> {
+    open fun searchDB(query: String): List<SearchModel> {
         //Delete Local Cache If It Exceeds 50 Entries
         if (getDB().size > 50) {
             DBUtils().deleteAll()
@@ -30,12 +28,12 @@ class DBUtils {
 
     }
 
-    fun getDB(): List<SearchModel> {
+    open fun getDB(): List<SearchModel> {
         //Return All DB Records
         return SugarRecord.listAll(SearchModel::class.java)
     }
 
-    fun deleteAll() {
+    open fun deleteAll() {
         //Delete All DB Records
         SugarRecord.deleteAll(SearchModel::class.java)
     }
