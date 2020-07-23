@@ -19,14 +19,13 @@ import org.mockito.junit.MockitoJUnitRunner
 class UrbanUnitText {
 
     val shared = mock(SharePrefUtil::class.java)
-    val context = mock(Context::class.java)
+    val context  = mock(Context::class.java)
 
 
     @Before
     fun init() {
-        //PowerMockito.mockStatic(Log::class.java)
-        Mockito.`when`(shared.getHistory(context)).thenReturn("lol")
         MockitoAnnotations.initMocks(this)
+        Mockito.`when`(shared.getHistory(context)).thenReturn("lol")
     }
 
     @Test

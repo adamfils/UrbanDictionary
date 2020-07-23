@@ -1,11 +1,12 @@
 package com.techguy.urbandictionary.utils
 
 import android.content.Context
+import android.content.SharedPreferences
 
-class SharePrefUtil {
+open class SharePrefUtil {
 
     //Save Last Query To Shared Preferences
-    fun setHistory(context: Context, value: String) {
+    open fun setHistory(context: Context, value: String) {
         val rateEditor =
             context.getSharedPreferences("history", Context.MODE_PRIVATE).edit()
         rateEditor.putString("query", value)
@@ -13,7 +14,7 @@ class SharePrefUtil {
     }
 
     //Get Last Query From Shared Preferences
-    fun getHistory(context: Context): String {
+    open fun getHistory(context: Context): String {
         val showPref =
             context.getSharedPreferences("history", Context.MODE_PRIVATE)
         //Return Lol by Default

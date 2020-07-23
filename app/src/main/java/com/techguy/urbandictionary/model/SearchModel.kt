@@ -2,7 +2,7 @@ package com.techguy.urbandictionary.model
 
 import com.orm.SugarRecord
 
-class SearchModel : SugarRecord{
+open class SearchModel : SugarRecord{
 
     var definition: String = ""
     var upVote: Long = 0
